@@ -27,6 +27,35 @@ PBP-C
 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist-checklist di atas.
     Pertama saya membuat proyek flutter baru bernama wowla shop. setelah itu saya membuat file baru bernama menu.dart dan memindahkan kode ```class MyHomePage``` dan ```class _MyHomePageState```. Pada file main.dart saya mengimport menu.dart sehingga dapat mengakses seluruh class yang telah dipindahkan. Setelah itu saya menentukan warna aplikasi, yakni biru pada main.dart dan mengubah sifat widget menjadi stateless. lalu saya membuat card yang berisi nama, npm, dan kelas. lalu membuat button card yang berisi nama dan icon. serta membuat list item home page yan berisi lihat produk, tambah produk, dan logout. Lalu saya mengintegrasikan infocard dan itemcard untuk ditampilkan dalam homepage.
 
+## Readme Tugas 8
+1. Apa kegunaan const di Flutter? Jelaskan apa keuntungan ketika menggunakan const pada kode Flutter. Kapan sebaiknya kita menggunakan const, dan kapan sebaiknya tidak digunakan?
+    - Const digunakan untuk menandai nilai yang bersifat tetap dan tidak berubah saat waktu kompilasi dan runtime. Keuntungannya adalah efisiensi memori dan mempercepat waktu render dan membuat aplikasi lebih responsif. Sebaiknya digunakan untuk menetapkan pada ikon tetap atau dekorasi tidak dinamis, tidak digunakan jika widget bersifat interaktif (memerlukan input)
+
+2.  Jelaskan dan bandingkan penggunaan Column dan Row pada Flutter. Berikan contoh implementasi dari masing-masing layout widget ini!
+    - Column:  widget yang menyusun elemen anaknya secara vertikal, dari atas ke bawah. 
+    - Row: widget yang menyusun elemen anaknya secara horizontal, dari kiri ke kanan.
+
+3. Sebutkan apa saja elemen input yang kamu gunakan pada halaman form yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!
+    - Elemen input yang digunakan
+        - TextFormField: Digunakan untuk input teks seperti “mood” dan “feelings”.
+        - ElevatedButton: Sebagai tombol untuk menyimpan atau mengirim data form.
+    - Elemen input yang tidak digunakan 
+        - Checkbox: Digunakan untuk pilihan dengan opsi true atau false.
+        - Radio Button: Memungkinkan pengguna memilih satu opsi dari beberapa pilihan.
+        - Switch: Berfungsi seperti Checkbox, tetapi lebih modern dalam tampilan on/off.
+        - Slider: Untuk memilih nilai dari rentang tertentu, seperti skala intensitas.
+        - Dropdown Button: Untuk pilihan yang menampilkan daftar pilihan tertentu
+
+4. Bagaimana cara kamu mengatur tema (theme) dalam aplikasi Flutter agar aplikasi yang dibuat konsisten? Apakah kamu mengimplementasikan tema pada aplikasi yang kamu buat?
+    - Untuk menjaga konsistensi tema, kita dapat mendefinisikan ThemeData pada root widget MaterialApp.
+
+5. Bagaimana cara kamu menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter?
+    - Salah satu cara yang dapat digunakan untuk berpindah-pindah halaman adalah dengan menggunakan widget navigator. Untuk menavigasu sebuah halaman baru, kita dapat mengakses navigator melalui BuildContext dan memanggil fungsi yang ada, yaitu:
+        - push():  menambahkan suatu route ke dalam stack route yang dikelola oleh Navigator. Method ini menyebabkan route yang ditambahkan berada pada paling atas stack, sehingga route yang baru saja ditambahkan tersebut akan muncul dan ditampilkan kepada pengguna.
+        - pop(): menghapus route yang sedang ditampilkan kepada pengguna (atau dalam kata lain, route yang berada pada paling atas stack) dari stack route yang dikelola oleh Navigator. Method ini menyebabkan aplikasi untuk berpindah dari route yang sedang ditampilkan kepada pengguna ke route yang berada di bawahnya pada stack yang dikelola Navigator.
+        - pushReplacement(): Method pushReplacement() menghapus route yang sedang ditampilkan kepada pengguna dan menggantinya dengan suatu route. Method ini menyebabkan aplikasi untuk berpindah dari route yang sedang ditampilkan kepada pengguna ke suatu route yang diberikan. Pada stack route yang dikelola Navigator, route lama pada atas stack akan digantikan secara langsung oleh route baru yang diberikan tanpa mengubah kondisi elemen stack yang berada di bawahnya.
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
