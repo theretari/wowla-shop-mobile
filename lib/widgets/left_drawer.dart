@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wowla_shop/screens/list_productentry.dart';
 import 'package:wowla_shop/screens/menu.dart';
 import 'package:wowla_shop/screens/productentry_form.dart';
-// TODO: Impor halaman MoodEntryFormPage jika sudah dibuat
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -54,13 +54,25 @@ class LeftDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.shop),
             title: const Text('Tambah Produk'),
-            // Bagian redirection ke MoodEntryFormPage
+            // Bagian redirection ke ProductEntryFormPage
             onTap: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const ProductEntryFormPage(),
                   ));
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.add_reaction_rounded),
+            title: const Text('Daftar Produk'),
+            onTap: () {
+              // Route menu ke halaman produk
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const ProductEntryPage()),
+              );
             },
           ),
         ],

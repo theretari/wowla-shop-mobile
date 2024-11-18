@@ -56,6 +56,26 @@ PBP-C
         - pushReplacement(): Method pushReplacement() menghapus route yang sedang ditampilkan kepada pengguna dan menggantinya dengan suatu route. Method ini menyebabkan aplikasi untuk berpindah dari route yang sedang ditampilkan kepada pengguna ke suatu route yang diberikan. Pada stack route yang dikelola Navigator, route lama pada atas stack akan digantikan secara langsung oleh route baru yang diberikan tanpa mengubah kondisi elemen stack yang berada di bawahnya.
 
 
+## Readme Tugas 9
+1. Jelaskan mengapa kita perlu membuat model untuk melakukan pengambilan ataupun pengiriman data JSON? Apakah akan terjadi error jika kita tidak membuat model terlebih dahulu?
+    Model membantu menyusun data JSON ke dalam struktur yang terorganisir sehingga mudah dikelola dalam aplikasi. Selain itu, model memungkinkan validasi data untuk memastikan data JSON sesuai dengan format yang diharapkan serta mempermudah pengelolaan data. Jika tidak dibuat model mungkin saja tidak error namun kita harus decode data yang mentah.
+
+2. Jelaskan fungsi dari library http yang sudah kamu implementasikan pada tugas ini
+    untuk melakukan komunikasi antara flutter dan django, seperti mengirim request HTTP, menambil data dari server, dan autentifikasi
+
+3. Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+    untuk mengelola cookie di aplikasi Flutter, terutama dalam autentikasi. Memungkinkan pengiriman dan penerimaan cookie dari backend, sehingga sesi pengguna dapat dikelola.Selain itu digunakan untuk mempertahankan status login pengguna di berbagai permintaan HTTP. Instance CookieRequest perlu dibagikan agar semua komponen aplikasi memiliki akses ke sesi pengguna yang sama.
+
+4. Jelaskan mekanisme pengiriman data mulai dari input hingga dapat ditampilkan pada Flutter.
+    input data di fluter, kirim ke backend django, pemrosesan di backend django, kirim ke fluter dengan json, menampilkan data di flutter
+
+5. Jelaskan mekanisme autentikasi dari login, register, hingga logout. Mulai dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+    memasukkan data yang dibutuhkan lalu flutter akan mengirimkan data tersebut dalam bentuk json ke django, lalu django memproses permintaan tersebut, setelah itu hasilnya dikirimkan dalam bentuk json dan ditampilkan ke flutter
+
+
+6. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
+    pertama saya membuat django app authentication lalu membuat seluruh fitur atuhentication mulai dari regist, login, logout. setelah itu saya mengintegrasikan pada flutter berdasarkan request user yang sedang login. lalu saya membuat model kustom json yang terintegrasi dengan flutter. lalu mengintegrasikan model tsb dengan form. untuk mengambil seluruh data dari web saya menerapkan fetching dependensi http.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
